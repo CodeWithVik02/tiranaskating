@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+:root {
+	--mainColor: #232429;
+	--mainColorLight: #5767aa;
+	--secondaryColor: rgb(0, 0, 0);
+	--textColor: #eee;
+}
+
+header {
+	display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80px;
+		padding: 0 2rem;
+		background-color: transparent;
+		color: white ;
+		position: fixed;
+		width: 100%;
+		transition: background-color 0.5s ease;
+		z-index: 1;
+}
+.scrolled {
+	background-color: var(--mainColor);
+  }
+
+  
+#lg{
+    font-size: 2rem;
+	   font-family: 'Glacial Indifference', sans-serif;
+}
+.button-35 {
+	align-items: center;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+	box-sizing: border-box;
+	color: #121212;
+	cursor: pointer;
+	display: inline-flex;
+	flex: 1 1 auto;
+	font-family: Inter,sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	justify-content: center;
+	line-height: 1;
+	margin: 0;
+	outline: none;
+	padding: 0.8rem 1.6rem;
+	text-align: center;
+	text-decoration: none;
+	transition: box-shadow .2s,-webkit-box-shadow .2s;
+	white-space: nowrap;
+	border: 0;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+  }
+  
+  .button-35:hover {
+	box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  }
+nav a:hover {
+	font-size: 1.8rem ;
+}
+
+nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+	font-family: 'Outfit', sans-serif;
+	transition: font-size 0.3s ease;
+	
+}
+.nav a::before {
+	content:'';
+	width:0%;
+	height:3px;
+	display:block;
+	background-color: #fff;
+	margin-bottom:10px;
+  }
+  .container a:hover::before {
+	width:100%;
+	transition:all .5s;
+  }
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	position: fixed;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+
+header .logo {
+	width: 8%;
+	padding-top: 1.5%;
+	padding-left: 5%;
+}
+
+header .logo--tow{
+     width: 8%;
+     padding-top: 1.5%;
+     position: absolute;
+     padding-left: 8.5%;
+     visibility: hidden;
+	 opacity: 0;
+	
+}
+header .logo:hover +.logo--tow{
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s;
+}
+header .logo,
+nav {
+	display: flex;
+    align-items: center; 
+    padding-left: 60% ; 
+}
+
+header .chatIcon{
+ 
+  padding-top: 2%;
+}
+/* Add this CSS to your stylesheets */
+.usrImg:hover{
+  width: 70px;
+  height: 70px;
+
+}
+
+
+.user-menu {
+	position: relative;
+  }
+  
+  .user-profile {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+  }
+  
+  .menu-dropdown {
+	position: absolute;
+	top: 107%; /* Position the dropdown below the user profile */
+	right: 0;
+	list-style: none;
+	padding: 0;
+	margin-right: 50px;
+	background-color: var(--mainColor);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+	border-radius: 7px ;
+	z-index: 1;
+	width: 200px;
+	font-family: Inter,sans-serif;
+	
+  }
+  
+  .menu-dropdown li {
+	padding: 12px;
+	text-align: center;
+	
+  }
+  
+  .menu-dropdown li:last-child {
+	border-bottom: none;
+	
+  }
+  
+  .menu-dropdown li:hover {
+	background-color: #3b3b3b;
+	border-radius: 7px 7px 0 0;
+  }
+  .icon {
+	display: inline-block; /* Ensure the icon is displayed in line */
+	vertical-align: middle; /* Align the icon vertically in the middle */
+	margin-right: 8px; /* Add some margin between the icon and text */
+  }
+ 
+  @media screen and (min-width:1600px){
+    nav{
+      padding-left: 70%;
+    }
+    .menu-dropdown{
+     margin-right: 120px;
+     top: 103%;
+    }
+		}
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+    .scrolled{
+     background-color: black;
+    }
+	header nav {
+	    
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+		z-index: 1;
+	}
+ nav{
+ 
+ padding-left: 0;
+ }
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1rem;
+	}
+	header .logo{
+	    width: 25% ;
+	    padding-top: 4%;
+	}
+	header .logo--tow{
+		width: 25% ;
+	    padding-top: 4%;
+	    visibility: visible ;
+	    opacity: 1;
+	    position: absolute;
+     padding-left: 15%;
+	}
+	.menu-dropdown{
+	  right: 0;
+	  left: 0;
+	
+	}
+	
+	
+}

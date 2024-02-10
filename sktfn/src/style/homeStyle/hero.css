@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+.first {
+    background-color: var(--overlay);
+    color: #fff;
+    height: 110vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    background: url('../images/imgee.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 102.5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+   
+}
+
+.hero .content {
+    height: 100%;
+    flex-direction: column; 
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items:flex-start; 
+    margin: auto;
+    padding-top: 7%;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.hero .content p:first-child {
+    font-size: 3.5rem;
+    width: 850px;
+    padding-left: 100px;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+
+.button-89 {
+    --b: 3px;   /* border thickness */
+    --s: .45em; /* size of the corner */
+    --color: #fefefe;
+    position: relative;
+    top: -5%;
+    font-family: 'Protest Riot', sans-serif;
+    left: 8%;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 20px;
+    border: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    width: 170px;
+  }
+  
+  .button-89:hover,
+  .button-89:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .button-89:active {
+    background: transparent;
+    color: #fff;
+  }
+@media screen and (min-width:1600px){
+    .hero .content p:nth-child(1){
+     font-size: 4rem;
+     width: 1000px;
+    }
+    .hero .content{
+    padding-top: 9%;
+    
+    }
+    .button-89{
+     left: 5%;
+     width: 200px;
+     font-size: 30px;
+    
+    } 
+    .hero:before{
+        height: 102%;
+     }
+    .first{
+    height: 100vh;
+    
+    }
+}
+
+@media screen and (max-width:940px) {
+    .hero .content{
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     padding-top: 130px;
+    }
+    .hero:before {
+        content: '';
+        background: url('../images/imgee.png') no-repeat center center/cover;
+        background-attachment: fixed;
+        height: 102.2%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .first{
+    height: 100vh;
+    }
+    .hero .content p:nth-child(1) {
+        font-size: 2.7rem;
+        width: 350px;
+        text-align: center;
+        padding-left: 0;
+        margin: 0;
+    }
+    .button-89{
+    top: 2%;
+    left: 0;
+    width: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

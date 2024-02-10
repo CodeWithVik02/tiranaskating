@@ -1,0 +1,11 @@
+.cntn{
+ margin-top: 170px ;
+ height: 70vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.form .input--form{
+
+width: 100%;
+}

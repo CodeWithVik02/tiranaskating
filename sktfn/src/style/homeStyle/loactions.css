@@ -1,0 +1,36 @@
+
+.loco{
+ margin-top: 9%;
+ height: auto;
+}
+
+.locations {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  .place--holder--one,
+  .place--holder--second {
+    width: 550px;
+    height: 500px;
+    margin: 0 100px; /* Adjust the gap between images */
+  }
+  
+  .place--holder--one img,
+  .place--holder--second img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  .one--txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  @media only screen and (max-width: 768px){
+    .locations{
+    flex-direction: column;
+    }
+  }
