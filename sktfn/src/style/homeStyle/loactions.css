@@ -44,9 +44,9 @@
   
   .place--holder--one,
   .place--holder--second {
-      width: 200px;
-      height: 200px;
-      margin: 20px 0; /* Adjust the gap between images */
+      width: 300px;
+      height: 250px;
+      margin-bottom: 150px ; /* Adjust the gap between images */
   }
   
   .place--holder--one img,

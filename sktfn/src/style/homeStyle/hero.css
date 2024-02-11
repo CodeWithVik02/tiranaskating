@@ -121,9 +121,7 @@
         left: 0;
         z-index: -1;
     }
-    .first{
-    height: 100vh;
-    }
+    
     .hero .content p:nth-child(1) {
         font-size: 2.7rem;
         width: 350px;

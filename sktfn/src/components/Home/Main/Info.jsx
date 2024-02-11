@@ -25,7 +25,8 @@ export default function Info(){
     };
   }, []); 
 return(
-  <div className="container" style={{ paddingTop: '7%' }}>
+<div id='info'>
+  <div className="container" style={{ paddingTop: '7%' }} >
   <div className="imageContainer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
     <img
       src={require('../../../style/images/267981-white-ice-skates-for-figure-skating.jpg')}
@@ -52,6 +53,7 @@ return(
       </div>
     )}
   </div>
+</div>
 </div>
 )
 
