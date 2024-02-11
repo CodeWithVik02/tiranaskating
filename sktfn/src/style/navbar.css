@@ -242,7 +242,7 @@ header .chatIcon{
 	}
 
 	nav a {
-		font-size: 1rem;
+		font-size: 2rem;
 	}
 	header .logo{
 	    width: 25% ;
@@ -257,10 +257,14 @@ header .chatIcon{
      padding-left: 15%;
 	}
 	.menu-dropdown{
-	  right: 0;
-	  left: 0;
-	
+	  position: relative;
+	  margin-right: 0;
+	  top: 0;
+	  box-shadow: none;
+	  background-color: transparent;
 	}
-	
+	.button-35{
+	 flex: 0;
+	}
 	
 }

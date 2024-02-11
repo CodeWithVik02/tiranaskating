@@ -8,6 +8,7 @@ import { IoLogInOutline } from "react-icons/io5";
 import { IoLogIn } from "react-icons/io5";
   const MyHero = () => {
     const navRef = useRef();
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [showMenu, setShowMenu] = useState(false);
     const navigate = useNavigate();
 	  const toggleMenu = () => {
@@ -25,6 +26,32 @@ import { IoLogIn } from "react-icons/io5";
     navigate('/login');
   };
   
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Empty array to run this effect only once on mount
+
+  // Define your state value based on screen width
+  const [stateValue, setStateValue] = useState(false);
+
+  useEffect(() => {
+    if (screenWidth < 768) {
+      setStateValue(false);
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+      setStateValue(false);
+    } else {
+      setStateValue(true);
+    }
+  }, [screenWidth]);
+
   
     useEffect(() => {
       const handleScroll = () => {
@@ -47,8 +74,10 @@ import { IoLogIn } from "react-icons/io5";
               <a href="/#" style={scrolled ?{color:'white'}  : {}}>Gallery</a>
               <a href="/" style={scrolled ?{color:'white'}  : {}}>About us</a>
               <button className="button-35" role="button">Plans & Prices</button>
-              <span className=" form-item-icon material-symbols-outlined" style={{fontSize:'2rem' , paddingLeft:'20px'}} onClick={toggleMenu}>
-             person</span>
+        {stateValue ? ( <span className=" form-item-icon material-symbols-outlined" style={{fontSize:'2rem' , paddingLeft:'20px'}} onClick={toggleMenu}>
+             person</span>) : <ul className="menu-dropdown">
+			<li><IoLogInOutline className='icon' style={{ fontSize: '24px' }}  /><button style={{fontWeight: '750'}} onClick={loginSend}>Log in</button></li>
+		  </ul>}     
              {showMenu && (
 		  <ul className="menu-dropdown">
 			<li><IoLogInOutline className='icon' style={{ fontSize: '24px' }}  /><button style={{fontWeight: '750'}} onClick={loginSend}>Log in</button></li>
