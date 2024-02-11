@@ -9,11 +9,11 @@ function Feature({ icon, iconBg, heading, text , isMobile}) {
       <Circle size="3.75rem" bg={iconBg} color="white" marginBottom={isMobile ? "20px" : null}>
         {icon({ size: "1.5rem" })}
       </Circle>
-      <VStack align="start" spacing="0.75rem">
+      <VStack align="start" spacing="0.45rem">
         <Heading as="h3" size="md" pt="0rem" margin={isMobile ? "0 auto" : null}>
           {heading}
         </Heading>
-        <Text color="muted" lineHeight="2rem" textAlign={isMobile ? "center" : null}>
+        <Text color="muted"  textAlign={isMobile ? "center" : null} >
           {text}
         </Text>
       </VStack>

@@ -17,7 +17,7 @@ return(
 <Features/>
 <Info/>
 <Location/>
-<ContactForm/>
+<ContactForm />
 
 
 </>
