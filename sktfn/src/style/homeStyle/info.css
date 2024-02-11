@@ -55,27 +55,68 @@
   
   @media only screen and (max-width: 768px) {
     .container {
-      flex-direction: column; /* Adjust spacing between images for smaller screens */
-    }
-    .container .imageContainer{
-        max-width: 80%;
-        height: 5%;
-      
-    }
-    #hd1{
-    font-size: 3rem;
-    width: 200px;
-    }
-    #hd2{
-        font-size: 3rem;
-        width: 200px;
-    }
-    img{
-    height: 50vh;
-    }
-    .container .imageContainer + .imageContainer {
-        margin-top: 20px;
-        margin-left: 0;
-    }
+      display: flex;
+      flex-direction: column; /* Adjust layout for smaller screens */
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .container .imageContainer {
+      flex: 1;
+      max-width: 80%; /* Adjust max-width for better fit on smaller screens */
+      margin-top: 20px; /* Add margin between images for better spacing */
+  }
+  
+  .container img:hover {
+      filter: blur(5px);
+  }
+  
+  .imageContainer {
+      position: relative;
+      display: inline-block; /* To allow proper centering */
+  }
+  
+  #hd1 {
+      font-size: 3rem; /* Adjust font size for smaller screens */
+      width: 200px; /* Adjust width for better fit */
+  }
+  
+  #hd2 {
+      font-size: 3rem; /* Adjust font size for smaller screens */
+      width: 200px; /* Adjust width for better fit */
+  }
+  
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      padding: 20px;
+      width: 90%; /* Adjust width for better fit on smaller screens */
+      max-width: 300px; /* Set a maximum width for responsiveness */
+      height: auto; /* Adjust height for content to fit */
+      border-radius: 20px;
+      display: flex;
+      justify-content: center; /* Horizontally center the items */
+      align-items: center;
+      opacity: 0; /* Initially hide the overlay */
+      transition: opacity 0.3s ease;
+  }
+  
+  .overlay.active {
+      opacity: 1; /* Show the overlay */
+  }
+  
+  .overlayContent {
+      text-align: center;
+  }
+  
+  img {
+      width: 100%;
+      height: auto; /* Adjust height to maintain aspect ratio */
+      border-radius: 20px;
+  }
+  
     
   }

@@ -6,7 +6,7 @@ const Location = () => {
   return (
   <div>
   <div className='loco'>  
-  <Heading as="h1" size="lg" id='hd1' textAlign="center">
+  <Heading as="h1" size="lg" id='hd4' textAlign="center" >
               Lokacioni
               </Heading>
     <div className='locations' >

@@ -30,7 +30,38 @@
     text-align: center;
   }
   @media only screen and (max-width: 768px){
-    .locations{
-    flex-direction: column;
-    }
+    .loco {
+      margin-top: 9%;
+      height: auto;
+  }
+  
+  .locations {
+      display: flex;
+      flex-direction: column; /* Change to column layout for smaller screens */
+      align-items: center; /* Center items horizontally */
+      margin-top: 50px; /* Adjust margin for better spacing */
+  }
+  
+  .place--holder--one,
+  .place--holder--second {
+      width: 200px;
+      height: 200px;
+      margin: 20px 0; /* Adjust the gap between images */
+  }
+  
+  .place--holder--one img,
+  .place--holder--second img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  .one--txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  
   }
