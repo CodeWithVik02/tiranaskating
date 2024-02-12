@@ -121,10 +121,10 @@ const ContactForm = ({isMobile}) => {
             </FormControl>
           </HStack>
           <FormControl w="100%">
-            <FormLabel>Last Name</FormLabel>
+            <FormLabel>Email</FormLabel>
             <Input
               type="text"
-              name="lastName"
+              name="Email"
               value={formData.lastName}
               onChange={handleInputChange}
               size="lg"
